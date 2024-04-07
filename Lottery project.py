@@ -38,4 +38,10 @@ def worker_function():
         choice = input('\nEnter your choice: ').lower()
 
         if choice.startswith('q'):
-  
+            print("Done! Thanks for playing.")
+            break
+        else:
+            process_choice(choice)
+
+if __name__ == '__main__':
+    worker_function()
