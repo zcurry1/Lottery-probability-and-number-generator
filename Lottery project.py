@@ -10,6 +10,15 @@ class LotteryFactory:
     @staticmethod
     def generate_multiple_sets(times, start, end, count):
         return [LotteryFactory.generate_numbers(start, end, count) for _ in range(times)]
+#adding prob generator- i still am working on whether i can bring in past numbers or not
+@staticmethod
+    def mega_millions_probability():
+        main_numbers_combinations = math.comb(70, 5)
+        mega_ball_combinations = math.comb(25, 1)
+        total_combinations = main_numbers_combinations * mega_ball_combinations
+        probability = 1 / total_combinations
+        return probabili
+
 
 def display_menu():
     print('\n\nSelect an option:\n')
