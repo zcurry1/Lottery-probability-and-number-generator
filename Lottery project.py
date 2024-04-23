@@ -17,15 +17,6 @@ class LotteryFactory:
         mega_ball_combinations = math.comb(25, 1)
         total_combinations = main_numbers_combinations * mega_ball_combinations
         probability = 1 / total_combinations
-        return probabili
-
-
-@staticmethod
-    def mega_millions_probability():
-        main_numbers_combinations = math.comb(70, 5)
-        mega_ball_combinations = math.comb(25, 1)
-        total_combinations = main_numbers_combinations * mega_ball_combinations
-        probability = 1 / total_combinations
         return probability
 
 
