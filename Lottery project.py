@@ -11,6 +11,18 @@ class LotteryFactory:
     def generate_multiple_sets(times, start, end, count):
         return [LotteryFactory.generate_numbers(start, end, count) for _ in range(times)]
 
+@staticmethod
+    def mega_millions_probability():
+        main_numbers_combinations = math.comb(70, 5)
+        mega_ball_combinations = math.comb(25, 1)
+        total_combinations = main_numbers_combinations * mega_ball_combinations
+        probability = 1 / total_combinations
+        return probability
+
+
+
+
+
 def display_menu():
     print('\n\nSelect an option:\n')
     print('1. Georgia Cash 3')
