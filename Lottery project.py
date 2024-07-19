@@ -44,7 +44,8 @@ def process_choice(choice):
         print('\nGeorgia Powerball:', LotteryFactory.generate_numbers(1, 69, 5), LotteryFactory.generate_numbers(1, 26, 1))
     elif choice == '5':
         print('\nGeorgia Mega Millions:', LotteryFactory.generate_numbers(1, 70, 5), LotteryFactory.generate_numbers(1, 25, 1))
-        
+    else:
+        print('Invalid choice. Please select a valid option.') # added an else clause for invalid inputs
 def worker_function():
     while True:
         display_menu()
