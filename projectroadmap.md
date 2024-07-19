@@ -1,1 +1,4 @@
--[x] create project road map
+- [x] create project road map
+- [x] find and download a repository that you would like to use
+- [x] add at least one more function to the repository
+- [x] add at least five more things to the repository
