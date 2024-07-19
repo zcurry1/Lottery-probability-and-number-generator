@@ -1,5 +1,6 @@
 import random
 import math  #used for probability calculation
+import logging #track user choices and helps debug log errors
 
 class LotteryFactory:
     @staticmethod
