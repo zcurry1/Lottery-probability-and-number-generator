@@ -1,4 +1,5 @@
 import random
+import math  #used for probability calculation
 
 class LotteryFactory:
     @staticmethod
@@ -43,7 +44,7 @@ def process_choice(choice):
         print('\nGeorgia Powerball:', LotteryFactory.generate_numbers(1, 69, 5), LotteryFactory.generate_numbers(1, 26, 1))
     elif choice == '5':
         print('\nGeorgia Mega Millions:', LotteryFactory.generate_numbers(1, 70, 5), LotteryFactory.generate_numbers(1, 25, 1))
-
+        
 def worker_function():
     while True:
         display_menu()
