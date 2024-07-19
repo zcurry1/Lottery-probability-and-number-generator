@@ -5,9 +5,15 @@ import logging #track user choices and helps debug log errors
 class LotteryFactory:
     @staticmethod
     def generate_numbers(start, end, count):
-        numbers = random.sample(range(start, end + 1), count)
-        numbers.sort()
-        return numbers
+        try: #generate list of random numbers within specific range
+            numbers = random.sample(range(start, end + 1), count)
+            numbers.sort()
+            return numbers
+        except ValueError as e:
+            logging.error("Error generating numbers: e")
+            return [] 
+            #logs error of numbers requested outside of size range
+    
 
     @staticmethod
     def generate_multiple_sets(times, start, end, count):
