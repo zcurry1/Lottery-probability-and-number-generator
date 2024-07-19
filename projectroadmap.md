@@ -1,3 +1,3 @@
--[x] create project road map
--[x] download lottery-probability-and-number-generator
--[x] add commmits to file
+- [x] create project road map
+- [x] download lottery-probability-and-number-generator
+- [x] add commmits to file
