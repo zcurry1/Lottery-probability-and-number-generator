@@ -27,9 +27,8 @@ class LotteryFactory:
         probability = 1 / total_combinations
         return probability
 
-
-
-
+user_choices_history = []
+#added list to store history of user choices
 
 def display_menu():
     print('\n\nSelect an option:\n')
