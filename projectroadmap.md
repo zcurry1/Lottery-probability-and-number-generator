@@ -1,1 +1,4 @@
-
+- [x] create project road map
+- [x] download lottery-probability-and-number-generator
+- [x] evaluate codeto see if good match for project
+- [x] add commmits to file

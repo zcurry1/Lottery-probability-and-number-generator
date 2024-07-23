@@ -1,12 +1,19 @@
 import random
 import math  #used for probability calculation
+import logging #track user choices and helps debug log errors
 
 class LotteryFactory:
     @staticmethod
     def generate_numbers(start, end, count):
-        numbers = random.sample(range(start, end + 1), count)
-        numbers.sort()
-        return numbers
+        try: #generate list of random numbers within specific range
+            numbers = random.sample(range(start, end + 1), count)
+            numbers.sort()
+            return numbers
+        except ValueError as e:
+            logging.error("Error generating numbers: e")
+            return [] 
+            #logs error of numbers requested outside of size range
+    
 
     @staticmethod
     def generate_multiple_sets(times, start, end, count):
@@ -20,9 +27,8 @@ class LotteryFactory:
         probability = 1 / total_combinations
         return probability
 
-
-
-
+user_choices_history = []
+#added list to store history of user choices
 
 def display_menu():
     print('\n\nSelect an option:\n')
@@ -44,7 +50,9 @@ def process_choice(choice):
         print('\nGeorgia Powerball:', LotteryFactory.generate_numbers(1, 69, 5), LotteryFactory.generate_numbers(1, 26, 1))
     elif choice == '5':
         print('\nGeorgia Mega Millions:', LotteryFactory.generate_numbers(1, 70, 5), LotteryFactory.generate_numbers(1, 25, 1))
-        
+        print('Probability of winning the Mega Millions jackpot:', LotteryFactory.mega_millions_probability()) #enhance output when they choose number 5
+    else:
+        print('Invalid choice. Please select a valid option.') # added an else clause for invalid inputs
 def worker_function():
     while True:
         display_menu()
